@@ -100,13 +100,13 @@ function Card() {
     <div className="cards">
       {data.map((hero) => (
         <Superheroes
+          url={hero.url}
           name={hero.name}
           universe={hero.universe}
           alterego={hero.alterego}
           occupation={hero.occupation}
           friends={hero.friends}
           superpowers={hero.superpowers}
-          url={hero.url}
           info={hero.info} >
         </Superheroes>
       ))}

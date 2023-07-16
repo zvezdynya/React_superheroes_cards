@@ -20,4 +20,16 @@
 Ответ: Самый верхний - <Router></Router>(BrowserRouter экспортируется с псевдонимом Router из "react-router-dom"), самый "глубокий" - <Block></Block>(их два и они экспортируются из src/assets/components
 /blockViewer.js).
 11. Какой командой можно сгенерировать разметку/компоненты на основе заранее заданного массива элементов? Приведите пример.
--Ответ: 
+Ответ: В домашнем задании использовался такой метод: 
+    {data.map((hero) => (
+        <Superheroes
+          url={hero.url}
+          name={hero.name}
+          universe={hero.universe}
+          alterego={hero.alterego}
+          occupation={hero.occupation}
+          friends={hero.friends}
+          superpowers={hero.superpowers}
+          info={hero.info} >
+        </Superheroes>
+    ))}.
