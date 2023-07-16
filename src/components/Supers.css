@@ -1,0 +1,80 @@
+.title {
+    text-align: center;
+    color: white;
+}
+
+.bold {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.name {
+    font-size: 22px;
+}
+
+span {
+    font-weight: 400;
+}
+
+.more-info,
+.btn-back {
+    padding-top: 10px;
+    color:rgb(9, 82, 150);
+    background-color: none;
+    border: none;
+    background: none;
+}
+
+.more-info:hover {
+    color: rgb(6, 58, 108);
+    text-decoration: underline;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    overflow-x: scroll;
+}
+
+.cards::-webkit-scrollbar {
+    width: 0;
+}
+
+.card-item {
+    width: 450px;
+    background-color: white;
+    padding: 35px 15px;
+    margin: 1%;
+    border-radius: 20px 5px;
+}
+
+.card {
+    width: 90%;
+    min-height: 500px;
+    max-height: max-content;
+    margin: 0 auto;
+}
+
+.avatar {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.flipper {
+    position: relative;
+}
+
+.back {
+    display: none;
+    font-weight: 400;
+}
+
+.back > .info {
+    font-size: 16px;
+    line-height: 23px;
+    height: fit-content;
+    font-weight: 400px;
+    opacity: 1;
+    margin: 0;
+}

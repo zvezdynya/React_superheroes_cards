@@ -1,70 +1,23 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Что такое props и можно ли использовать props в функциональных компонентах?
+Ответ: Props - коллекция ассоциированных со значением компонентов. Они позволяют создавать динамические компоненты, не зависящие от статически закодированных данных, а props, как параметр, передаваемый в функцию компонента, инкапсулирует свойства объекта. Да, в функциональных компонентах props тоже используется в качестве параметра функции, который возвращает реакт-элемент.
+2. Нужно ли выделять в отдельный компонент статью в блоге?
+Ответ: если следовать принципам DRY/DIE, то, т.к. этот объект статьи в блоге, вероятнее всего, будет в последствии переиспользоваться, то лучше выделить его в отдельный компонент.
+3. Можно ли использовать React без JSX?
+Ответ: В целом, можно, но тогда сложные компоненты + условные конструкции стали бы очень громоздкими и сложночитаемыми/сложноподдерживаемыми, поэтому разработчики в основном используют реакт совместно с jsx.
+4. Чем отличается JSX от HTML?
+Ответ: В jsx вместо атрибута class используется className и одиночные теги обязательно должны быть закрыты(<br />, <img />, <hr />).
+5. Для чего нам нужны свойства (props) компонентов? 
+Ответ: Для переиспользования компонентов, а не написания нового кода под каждый новый подобный элемент.Таким образом мы сможем брать данные элемента и подставлять их в каждый новый идентичный создаваемый компонент.
+6. В примере с `CardList` чем можно было бы заменить `<React.Fragment>`?
+Ответ: Можно использовать просто <div></div>, если он не ломает верстку и допустим для использования в нашей задаче, либо <></> пустые угловые скобки, но этот способ поддерживают не все популярные инструменты.
+7. Можно ли сказать, что классовые и функциональные компоненты равнозначны по функциональности?
+Ответ: Да, оба вида компонентов эквивалентны друг другу, а отличия будут понятны после изучения внутреннего состояния компонента.
+8. Можно ли полностью описать приложение, используя только функциональные компоненты? 
+Ответ: Опираясь на нынешние знания, я бы сказала, что да. 
+9. Какой командой мы делаем экспорт компонента для возможности его использования в других местах приложения? 
+Ответ: export default ...component_name...
+10. Изучите структуру компонент в проекте https://github.com/alisa-tsvetkova/EthereumUI и напишите, какой именно компонент является самым верхним, а какой самым «глубоким»?
+Ответ: Самый верхний - <Router></Router>(BrowserRouter экспортируется с псевдонимом Router из "react-router-dom"), самый "глубокий" - <Block></Block>(их два и они экспортируются из src/assets/components
+/blockViewer.js).
+11. Какой командой можно сгенерировать разметку/компоненты на основе заранее заданного массива элементов? Приведите пример.
+-Ответ: 

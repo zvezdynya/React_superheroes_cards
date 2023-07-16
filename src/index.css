@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.color {
+  color:aquamarine;
+  font-style: italic;
+}
+
+body {
+  height: 600px;
+  background-color: rgba(0, 0, 0, 1);
+  width: 100%;
+  margin: 0 auto;
+}
+
+body::-webkit-scrollbar {
+  width: 3px;
+  background-color: #f9f9fd;
+}
