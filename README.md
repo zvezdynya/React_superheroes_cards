@@ -21,15 +21,4 @@
 /blockViewer.js).
 11. Какой командой можно сгенерировать разметку/компоненты на основе заранее заданного массива элементов? Приведите пример.
 Ответ: В домашнем задании использовался такой метод: 
-    {data.map((hero) => (
-        <Superheroes
-          url={hero.url}
-          name={hero.name}
-          universe={hero.universe}
-          alterego={hero.alterego}
-          occupation={hero.occupation}
-          friends={hero.friends}
-          superpowers={hero.superpowers}
-          info={hero.info} >
-        </Superheroes>
-    ))}.
+    {data.map((hero) => (<Superheroes url={hero.url} name={hero.name} universe={hero.universe} alterego={hero.alterego} occupation={hero.occupation} friends={hero.friends} superpowers={hero.superpowers} info={hero.info}></Superheroes>))}.
